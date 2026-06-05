@@ -216,11 +216,9 @@ Todos os modelos foram comparados usando validação cruzada estratificada e mé
 
 O melhor modelo é selecionado automaticamente na última célula do notebook com base na métrica **AUC-ROC** calculada sobre os resultados de validação.
 
-Após executar o notebook, preencher:
-
 | Critério | Resultado |
 |---|---|
-| Melhor modelo selecionado | Preencher com o valor exibido no notebook |
+| Melhor modelo selecionado | Logistic Regression |
 | Critério de escolha | AUC-ROC |
 | Arquivo do modelo | `model/modelo_final.joblib` |
 | Arquivo do scaler | `model/scaler.joblib` |
