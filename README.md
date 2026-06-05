@@ -258,7 +258,6 @@ model/modelo_final.joblib
 model/scaler.joblib
 model/metadata.json
 ```
-
 O usuário informa os dados clínicos no formulário da interface. Em seguida, o app:
 
 1. Organiza os valores informados em um `DataFrame`;
@@ -267,12 +266,9 @@ O usuário informa os dados clínicos no formulário da interface. Em seguida, o
 4. Exibe a classe prevista;
 5. Exibe a probabilidade estimada para a classe 1, quando disponível.
 
-Adicionar aqui prints reais da aplicação funcionando:
+<img width="640" height="551" alt="image" src="https://github.com/user-attachments/assets/49c1201f-cfcb-418e-bb89-1205d600690d" />
 
-```text
-docs/prints/formulario.png
-docs/prints/resultado.png
-```
+<img width="593" height="559" alt="image" src="https://github.com/user-attachments/assets/82d19ac9-e3ea-4af2-88cf-8656b12efa76" />
 
 ---
 
@@ -296,8 +292,8 @@ docs/prints/resultado.png
 
 ```bash
 # 1. Clone o repositório
-git clone LINK_DO_REPOSITORIO
-cd NOME_DO_REPOSITORIO
+git clone https://github.com/unimarnata-GG/PROJETO-AVALIATIVO-P2
+cd PROJETO-AVALIATIVO-P2
 
 # 2. Crie e ative o ambiente virtual
 python -m venv venv
