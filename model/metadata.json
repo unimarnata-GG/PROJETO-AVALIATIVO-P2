@@ -1,0 +1,32 @@
+{
+    "melhor_modelo": "Logistic Regression",
+    "criterio_escolha": "AUC-ROC",
+    "features": [
+        "Idade",
+        "Genero",
+        "Bilirrubina_Total",
+        "Bilirrubina_Direta",
+        "Fosfatase_Alcalina",
+        "ALT",
+        "AST",
+        "Proteina_Total",
+        "Albumina",
+        "Relacao_A_G"
+    ],
+    "mapeamento_genero": {
+        "Feminino": 0,
+        "Masculino": 1
+    },
+    "mapeamento_classe": {
+        "0": "Sem indicativo de doença hepática",
+        "1": "Possível indicativo de doença hepática"
+    },
+    "metricas_teste": {
+        "Acurácia": 0.7209302325581395,
+        "Precisão": 0.7605633802816901,
+        "Recall": 0.8852459016393442,
+        "F1-Score": 0.8181818181818182,
+        "AUC-ROC": 0.7422950819672132
+    },
+    "observacao": "Modelo salvo sem Pipeline; o app deve aplicar model/scaler.joblib antes da predição."
+}
