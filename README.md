@@ -9,7 +9,7 @@
 [![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy&logoColor=white)](https://numpy.org/)
 [![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Classification-purple)]()
 
-**Acesso ao app:** adicionar aqui o link gerado pelo Streamlit Community Cloud.
+**Acesso ao app:** https://projeto-avaliativo-p2-nathaliagit-hbk33qhfgjac7nm6xt9kpp.streamlit.app/
 
 ---
 
@@ -241,15 +241,13 @@ As métricas calculadas no projeto foram:
 | F1-Score | Média harmônica entre precisão e recall | Útil quando há desequilíbrio entre classes |
 | AUC-ROC | Capacidade de separação entre as classes | Quanto mais próximo de 1, melhor |
 
-Após executar o notebook, preencher a tabela abaixo com os resultados finais do conjunto de teste:
-
 | Métrica | Resultado |
 |---|---:|
-| Acurácia | preencher |
-| Precisão | preencher |
-| Recall | preencher |
-| F1-Score | preencher |
-| AUC-ROC | preencher |
+| Acurácia | 0.72 |
+| Precisão | 0.76 |
+| Recall | 0.88 |
+| F1-Score | 0.81 |
+| AUC-ROC | 0.74 |
 
 ---
 
