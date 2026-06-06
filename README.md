@@ -1,4 +1,4 @@
-    # Classificação de Doença Hepática — Machine Learning com Streamlit
+# Classificação de Doença Hepática — Machine Learning com Streamlit
 
 > Aplicação web interativa para classificação de pacientes com possível indicativo de doença hepática, desenvolvida com Python, Scikit-learn e Streamlit.
 
@@ -94,8 +94,7 @@ p2/
 │   └── dataset_tratado.csv         # Dataset tratado gerado pelo notebook
 │
 ├── model/
-│   ├── modelo_final.joblib         # Melhor modelo treinado
-│   ├── scaler.joblib               # StandardScaler usado na normalização
+│   ├── modelo_final.joblib         # Pipeline final treinado
 │   └── metadata.json               # Informações do modelo, features e métricas
 │
 ├── notebooks/
@@ -196,7 +195,7 @@ Dataset original
 14. Uso do modelo na aplicação Streamlit
 ```
 
-Esta versão mantém o fluxo sem `Pipeline`. Por isso, o `StandardScaler` é salvo separadamente e carregado no Streamlit antes da predição.
+Esta versão utiliza `Pipeline`. Por isso, o `StandardScaler` fica incorporado ao próprio `modelo_final.joblib`, evitando normalização manual no app.
 
 ---
 
@@ -216,12 +215,14 @@ Todos os modelos foram comparados usando validação cruzada estratificada e mé
 
 O melhor modelo é selecionado automaticamente na última célula do notebook com base na métrica **AUC-ROC** calculada sobre os resultados de validação.
 
+Após executar o notebook, preencher:
+
 | Critério | Resultado |
 |---|---|
-| Melhor modelo selecionado | Logistic Regression |
+| Melhor modelo selecionado | Preencher com o valor exibido no notebook |
 | Critério de escolha | AUC-ROC |
 | Arquivo do modelo | `model/modelo_final.joblib` |
-| Arquivo do scaler | `model/scaler.joblib` |
+| Pré-processamento | Incorporado ao Pipeline salvo no modelo |
 
 O uso da AUC-ROC como critério é adequado porque ela avalia a capacidade geral do modelo de separar as duas classes, considerando diferentes limiares de decisão.
 
@@ -239,13 +240,15 @@ As métricas calculadas no projeto foram:
 | F1-Score | Média harmônica entre precisão e recall | Útil quando há desequilíbrio entre classes |
 | AUC-ROC | Capacidade de separação entre as classes | Quanto mais próximo de 1, melhor |
 
+Após executar o notebook, preencher a tabela abaixo com os resultados finais do conjunto de teste:
+
 | Métrica | Resultado |
 |---|---:|
-| Acurácia | 0.72 |
-| Precisão | 0.76 |
-| Recall | 0.88 |
-| F1-Score | 0.81 |
-| AUC-ROC | 0.74 |
+| Acurácia | preencher |
+| Precisão | preencher |
+| Recall | preencher |
+| F1-Score | preencher |
+| AUC-ROC | preencher |
 
 ---
 
@@ -255,20 +258,23 @@ A aplicação Streamlit carrega os arquivos gerados pelo notebook:
 
 ```text
 model/modelo_final.joblib
-model/scaler.joblib
 model/metadata.json
 ```
+
 O usuário informa os dados clínicos no formulário da interface. Em seguida, o app:
 
 1. Organiza os valores informados em um `DataFrame`;
-2. Aplica o `StandardScaler` salvo em `scaler.joblib`;
-3. Envia os dados normalizados para o modelo salvo;
+2. Envia os dados para o Pipeline salvo em `modelo_final.joblib`;
+3. O Pipeline aplica o `StandardScaler` internamente;
 4. Exibe a classe prevista;
 5. Exibe a probabilidade estimada para a classe 1, quando disponível.
 
-![Formulário da aplicação](docs/prints/formulario.png)
+Adicionar aqui prints reais da aplicação funcionando:
 
-![Resultado da predição](docs/prints/resultado.png)
+```text
+docs/prints/formulario.png
+docs/prints/resultado.png
+```
 
 ---
 
@@ -292,8 +298,8 @@ O usuário informa os dados clínicos no formulário da interface. Em seguida, o
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/unimarnata-GG/PROJETO-AVALIATIVO-P2
-cd PROJETO-AVALIATIVO-P2
+git clone LINK_DO_REPOSITORIO
+cd NOME_DO_REPOSITORIO
 
 # 2. Crie e ative o ambiente virtual
 python -m venv venv
@@ -327,7 +333,6 @@ Essa execução gera:
 
 ```text
 model/modelo_final.joblib
-model/scaler.joblib
 model/metadata.json
 data/dataset_tratado.csv
 ```
