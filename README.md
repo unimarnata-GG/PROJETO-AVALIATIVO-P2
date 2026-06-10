@@ -242,11 +242,11 @@ As métricas abaixo foram calculadas no conjunto de teste, composto por dados n�
 
 | Métrica | Resultado |
 |---|---:|
-| Acurácia | 0.721 |
-| Precisão | 0.761 |
-| Recall | 0.885 |
-| F1-Score | 0.818 |
-| AUC-ROC | 0.738 |
+| Acurácia | 0.72093 |
+| Precisão | 0.760563 |
+| Recall | 0.885246 |
+| F1-Score | 0.818182 |
+| AUC-ROC | 0.738361 |
 
 ---
 
