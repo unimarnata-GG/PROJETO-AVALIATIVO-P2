@@ -64,7 +64,7 @@ O dataset utilizado foi o **Indian Liver Patient Records**, uma base pública co
 No projeto, o dataset é carregado no notebook e posteriormente salvo em sua versão tratada:
 
 ```text
-data/dataset_tratado.csv
+data/dataset.csv
 ```
 
 A base contém variáveis como idade, gênero, bilirrubina total e direta, fosfatase alcalina, enzimas hepáticas ALT e AST, proteína total, albumina e relação albumina/globulina.
@@ -91,14 +91,14 @@ p2/
 ├── README.md                      # Documentação do projeto
 │
 ├── data/
-│   └── dataset_tratado.csv         # Dataset tratado gerado pelo notebook
+│   └── dataset.csv         # Dataset tratado gerado pelo notebook
 │
 ├── model/
 │   ├── modelo_final.joblib         # Pipeline final treinado
 │   └── metadata.json               # Informações do modelo, features e métricas
 │
-├── notebooks/
-│   └── notebook_atualizado.ipynb   # Notebook de análise, treinamento e salvamento
+├── notebook/
+│   └── Trabalhop1.ipynb   # Notebook de análise, treinamento e salvamento
 │
 └── reports/
     └── relatorio_atualizado.pdf    # Relatório final do projeto
@@ -215,11 +215,9 @@ Todos os modelos foram comparados usando validação cruzada estratificada e mé
 
 O melhor modelo é selecionado automaticamente na última célula do notebook com base na métrica **AUC-ROC** calculada sobre os resultados de validação.
 
-Após executar o notebook, preencher:
-
 | Critério | Resultado |
 |---|---|
-| Melhor modelo selecionado | Preencher com o valor exibido no notebook |
+| Melhor modelo selecionado | Logistic Regression |
 | Critério de escolha | AUC-ROC |
 | Arquivo do modelo | `model/modelo_final.joblib` |
 | Pré-processamento | Incorporado ao Pipeline salvo no modelo |
@@ -240,15 +238,15 @@ As métricas calculadas no projeto foram:
 | F1-Score | Média harmônica entre precisão e recall | Útil quando há desequilíbrio entre classes |
 | AUC-ROC | Capacidade de separação entre as classes | Quanto mais próximo de 1, melhor |
 
-Após executar o notebook, preencher a tabela abaixo com os resultados finais do conjunto de teste:
+As métricas abaixo foram calculadas no conjunto de teste, composto por dados não utilizados durante o treinamento e a seleção do modelo:
 
 | Métrica | Resultado |
 |---|---:|
-| Acurácia | preencher |
-| Precisão | preencher |
-| Recall | preencher |
-| F1-Score | preencher |
-| AUC-ROC | preencher |
+| Acurácia | 0.721 |
+| Precisão | 0.761 |
+| Recall | 0.885 |
+| F1-Score | 0.818 |
+| AUC-ROC | 0.738 |
 
 ---
 
@@ -269,11 +267,14 @@ O usuário informa os dados clínicos no formulário da interface. Em seguida, o
 4. Exibe a classe prevista;
 5. Exibe a probabilidade estimada para a classe 1, quando disponível.
 
-Adicionar aqui prints reais da aplicação funcionando:
+```markdown
+### Formulário de entrada
 
-```text
-docs/prints/formulario.png
-docs/prints/resultado.png
+![Formulário da aplicação](docs/prints/formulario.png)
+
+### Resultado da predição
+
+![Resultado da aplicação](docs/prints/resultado.png)ints/resultado.png
 ```
 
 ---
@@ -298,8 +299,8 @@ docs/prints/resultado.png
 
 ```bash
 # 1. Clone o repositório
-git clone LINK_DO_REPOSITORIO
-cd NOME_DO_REPOSITORIO
+git clone https://github.com/MBCmurilo/PROJETO-AVALIATIVO-P2-Nathalia.git
+cd PROJETO-AVALIATIVO-P2-Nathalia
 
 # 2. Crie e ative o ambiente virtual
 python -m venv venv
@@ -326,7 +327,7 @@ http://localhost:8501
 Caso os arquivos em `model/` ainda não existam, execute o notebook abaixo até a última célula:
 
 ```text
-notebooks/notebook_atualizado.ipynb
+notebook/Trabalhop1.ipynb
 ```
 
 Essa execução gera:
@@ -334,7 +335,7 @@ Essa execução gera:
 ```text
 model/modelo_final.joblib
 model/metadata.json
-data/dataset_tratado.csv
+data/dataset.csv
 ```
 
 ---
